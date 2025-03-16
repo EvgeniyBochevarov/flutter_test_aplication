@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
   }
 }
 
-Container buildWidget(String Path) {
+Container buildWidget(String path) {
   return Container(
     width: 200,
     height: 200,
@@ -31,7 +31,7 @@ Container buildWidget(String Path) {
       borderRadius: BorderRadius.circular(10),
       border: Border.all(color: Colors.grey),
     ),
-    child: Image.network(Path, height: 200, width: 200, fit: BoxFit.cover),
+    child: Image.network(path, height: 200, width: 200, fit: BoxFit.cover),
   );
 }
 
@@ -89,10 +89,19 @@ class MyHomePage extends StatelessWidget {
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Colors.grey),
+              border: Border.all(color: const Color.fromARGB(255, 7, 224, 36)),
+              gradient: LinearGradient(colors: [Colors.yellow, Colors.cyan]),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black45,
+                  offset: Offset(-5, 5),
+                  blurRadius: 5,
+                  spreadRadius: 5,
+                ),
+              ],
             ),
-            child: Image.network(
-              Path,
+            child: Image.asset(
+              'assets/jpg/Dog.jpg',
               height: 200,
               width: 200,
               fit: BoxFit.cover,
@@ -103,7 +112,7 @@ class MyHomePage extends StatelessWidget {
     );
   }
 
-  Widget example() {
-    return SizedBox();
-  }
+  //  Widget example() {
+  //    return SizedBox();
+  //  }
 }
