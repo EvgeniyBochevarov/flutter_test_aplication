@@ -111,8 +111,4 @@ class MyHomePage extends StatelessWidget {
       ),
     );
   }
-
-  //  Widget example() {
-  //    return SizedBox();
-  //  }
 }
